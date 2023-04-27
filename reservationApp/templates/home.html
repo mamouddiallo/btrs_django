@@ -1,0 +1,76 @@
+{% extends "base.html" %} {% load humanize %} {% load customfilter %} {% block pageContent %}
+
+<!--Section: Content-->
+<section class="">
+    {% if user.id %}
+    <div class="row">
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-primary text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Categorie</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ categories|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-list"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-warning text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total car</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ products|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-bus fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+            <div class="card rounded-0 shadow border-success text-start summary-card my-3">
+                <div class="card-body">
+                    <div class="d-flex w-100">
+                        <div class="col-8 pe-2">
+                            <div class="summary-title fs-5 border-bottom">Total Upcoming Trip</div>
+                            <div class="summary-count text-end fw-bolder mt-3 px-4">{{ upcoming_trip|intcomma }}</div>
+                        </div>
+                        <div class="col-4">
+                            <div class="summary-icon p-3 rounded border text-center bg-gradient bg-light">
+                                <i class="fa fa-file-invoice fs-2"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% else %}
+    <div class="card card-default rounded-0 shadow border border-dark">
+        <div class="card-body">
+            <div class="container-fluid">
+                <h2 class="text-center fw-bold">Bienvenue chez CTE (Compagnie de Transport Express) </h2>
+                <hr>
+                <p>
+                   Réservez dès maintenant vos tickets de voyage chez CTE pour une expérience de voyage inoubliable. Nous sommes une compagnie de transport de confiance, offrant une gamme complète de services pour répondre à tous vos besoins de voyage. Nous mettons en place des protocoles de sécurité stricts pour protéger la santé et la sécurité de nos passagers. Réservez chez CTE pour voyager en toute sécurité et en toute confiance.
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    {% endif %}
+</section>
+
+
+</div> {% endblock pageContent %}
