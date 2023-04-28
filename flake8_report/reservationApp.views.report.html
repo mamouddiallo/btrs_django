@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>flake8 violations: reservationApp\views.py</title>
+      <meta http-equiv="Content-Type" value="text/html; charset=UTF-8">
+      <link rel="stylesheet" href="styles.css">
+<script>
+function bindHandler(link) {
+   var code = link.getAttribute('data-code');
+   var key = location.pathname + '#' + code;
+
+   var ul = link.parentNode.querySelector('.details');
+   if (sessionStorage[key] != 'open') {
+      ul.style.display = 'none';
+   }
+   link.addEventListener('click', function (event) {
+      if (!ul.style.display || ul.style.display == 'none') {
+         ul.style.display = 'block';
+         sessionStorage[key] = 'open';
+      } else {
+         ul.style.display = 'none';
+         sessionStorage[key] = 'closed';
+      }
+   });
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+   var links = document.querySelectorAll('#index > li > a');
+   for (var i = 0; i < links.length; i++) {
+      bindHandler(links[i]);
+   }
+});
+</script>
+   </head>
+   <body>
+      <div id="masthead" class="sev-1"></div>
+      <div id="page">
+         <p id="srclink">
+            <a title="View full annotated source"
+               href="reservationApp.views.source.html">
+               <img src="file.svg" alt="&#x2261;">
+            </a></p>
+         <h1>
+            <a href="index.html">
+               <img src="back.svg" alt="&#x2B05;">
+               reservationApp\views.py
+            </a>
+         </h1>
+
+         <ul id="index">
+         
+         <li>
+            <a data-code="F401">
+               <span class="count sev-1">
+                  7
+               </span>
+               <strong>F401:</strong> 'email.message' imported but unused
+               
+                  (and 6 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>'email.message' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l1">
+                  <tt><i>1</i> <span class="kn">from</span> <span class="nn">email</span> <span class="kn">import</span> <span class="n">message</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'unicodedata.category' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l2">
+                  <tt><i>2</i> <span class="kn">from</span> <span class="nn">unicodedata</span> <span class="kn">import</span> <span class="n">category</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'btrs_django.settings.MEDIA_ROOT' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l6">
+                  <tt><i>6</i> <span class="kn">from</span> <span class="nn">btrs_django.settings</span> <span class="kn">import</span> <span class="n">MEDIA_ROOT</span><span class="p">,</span> <span class="n">MEDIA_URL</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'btrs_django.settings.MEDIA_URL' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l6">
+                  <tt><i>6</i> <span class="kn">from</span> <span class="nn">btrs_django.settings</span> <span class="kn">import</span> <span class="n">MEDIA_ROOT</span><span class="p">,</span> <span class="n">MEDIA_URL</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'cryptography.fernet.Fernet' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l13">
+                  <tt><i>13</i> <span class="kn">from</span> <span class="nn">cryptography.fernet</span> <span class="kn">import</span> <span class="n">Fernet</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'django.conf.settings' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l14">
+                  <tt><i>14</i> <span class="kn">from</span> <span class="nn">django.conf</span> <span class="kn">import</span> <span class="n">settings</span></tt>
+               </a>
+            </li><li>
+               
+               <p>'base64' imported but unused:</p>
+               
+               <a href="reservationApp.views.source.html#l15">
+                  <tt><i>15</i> <span class="kn">import</span> <span class="nn">base64</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="F811">
+               <span class="count sev-1">
+                  3
+               </span>
+               <strong>F811:</strong> redefinition of unused 'category' from line 2
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l134">
+                  <tt><i>134</i>             <span class="n">category</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">pk</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l157">
+                  <tt><i>157</i>         <span class="n">category</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l170">
+                  <tt><i>170</i>             <span class="n">category</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E251">
+               <span class="count sev-2">
+                  83
+               </span>
+               <strong>E251:</strong> unexpected spaces around keyword / parameter equals
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 3 places):</p>
+               
+               <a href="reservationApp.views.source.html#l53">
+                  <tt><i>53</i>     <span class="n">context</span><span class="p">[</span><span class="s1">&#39;upcoming_trip&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span><span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">schedule__gt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">today</span><span class="p">())</span><span class="o">.</span><span class="n">count</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 3 places):</p>
+               
+               <a href="reservationApp.views.source.html#l68">
+                  <tt><i>68</i>             <span class="n">loginUser</span> <span class="o">=</span> <span class="n">authenticate</span><span class="p">(</span><span class="n">username</span><span class="o">=</span> <span class="n">username</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">pwd</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l79">
+                  <tt><i>79</i>     <span class="n">user</span> <span class="o">=</span> <span class="n">User</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="o">.</span><span class="n">id</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 3 places):</p>
+               
+               <a href="reservationApp.views.source.html#l100">
+                  <tt><i>100</i>         <span class="n">form</span> <span class="o">=</span> <span class="n">UpdatePasswords</span><span class="p">(</span><span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l140">
+                  <tt><i>140</i>             <span class="n">form</span> <span class="o">=</span> <span class="n">SaveCategory</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span> <span class="n">category</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l151">
+                  <tt><i>151</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l157">
+                  <tt><i>157</i>         <span class="n">category</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l170">
+                  <tt><i>170</i>             <span class="n">category</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l203">
+                  <tt><i>203</i>             <span class="n">form</span> <span class="o">=</span> <span class="n">SaveLocation</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span> <span class="n">location</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l214">
+                  <tt><i>214</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l220">
+                  <tt><i>220</i>         <span class="n">location</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l233">
+                  <tt><i>233</i>             <span class="n">location</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l267">
+                  <tt><i>267</i>             <span class="n">form</span> <span class="o">=</span> <span class="n">SaveBus</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span> <span class="n">bus</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l278">
+                  <tt><i>278</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l283">
+                  <tt><i>283</i>     <span class="n">categories</span> <span class="o">=</span> <span class="n">Category</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l286">
+                  <tt><i>286</i>         <span class="n">bus</span> <span class="o">=</span> <span class="n">Bus</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l299">
+                  <tt><i>299</i>             <span class="n">bus</span> <span class="o">=</span> <span class="n">Bus</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l333">
+                  <tt><i>333</i>             <span class="n">form</span> <span class="o">=</span> <span class="n">SaveSchedule</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span> <span class="n">schedule</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l344">
+                  <tt><i>344</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l349">
+                  <tt><i>349</i>     <span class="n">buses</span> <span class="o">=</span> <span class="n">Bus</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l350">
+                  <tt><i>350</i>     <span class="n">locations</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l354">
+                  <tt><i>354</i>         <span class="n">schedule</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l367">
+                  <tt><i>367</i>             <span class="n">schedule</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 4 places):</p>
+               
+               <a href="reservationApp.views.source.html#l385">
+                  <tt><i>385</i>         <span class="n">schedules</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">schedule__gt</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">())</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l396">
+                  <tt><i>396</i>         <span class="n">depart</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;depart&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l397">
+                  <tt><i>397</i>         <span class="n">destination</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;destination&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 12 places):</p>
+               
+               <a href="reservationApp.views.source.html#l398">
+                  <tt><i>398</i>         <span class="n">schedules</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__year</span> <span class="o">=</span> <span class="n">year</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__month</span> <span class="o">=</span> <span class="n">month</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__day</span> <span class="o">=</span> <span class="n">day</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">depart</span> <span class="o">=</span> <span class="n">depart</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span> <span class="p">)))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l408">
+                  <tt><i>408</i>         <span class="n">schedule</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">schedPK</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l413">
+                  <tt><i>413</i>         <span class="n">book</span> <span class="o">=</span> <span class="n">Booking</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l430">
+                  <tt><i>430</i>             <span class="n">form</span> <span class="o">=</span> <span class="n">SaveBooking</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">,</span> <span class="n">instance</span><span class="o">=</span> <span class="n">booking</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l435">
+                  <tt><i>435</i>                 <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Booking has been saved successfully. Your Booking Refderence Code is: &lt;b&gt;</span><span class="si">{</span><span class="n">booking</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s1">&lt;/b&gt;&#39;</span><span class="p">,</span> <span class="n">extra_tags</span> <span class="o">=</span> <span class="s1">&#39;stay&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l445">
+                  <tt><i>445</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l462">
+                  <tt><i>462</i>         <span class="n">context</span><span class="p">[</span><span class="s1">&#39;booking&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Booking</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">pk</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals:</p>
+               
+               <a href="reservationApp.views.source.html#l472">
+                  <tt><i>472</i>         <span class="n">booking</span> <span class="o">=</span> <span class="n">Booking</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span><span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l483">
+                  <tt><i>483</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span><span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l491">
+                  <tt><i>491</i>             <span class="n">booking</span> <span class="o">=</span> <span class="n">Booking</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="nb">id</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">])</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Unexpected spaces around keyword / parameter equals (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l507">
+                  <tt><i>507</i>     <span class="n">context</span><span class="p">[</span><span class="s1">&#39;locations&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Location</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">all</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E231">
+               <span class="count sev-2">
+                  47
+               </span>
+               <strong>E231:</strong> missing whitespace after ','
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l3">
+                  <tt><i>3</i> <span class="kn">from</span> <span class="nn">django.shortcuts</span> <span class="kn">import</span> <span class="n">render</span><span class="p">,</span><span class="n">redirect</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l25">
+                  <tt><i>25</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l25">
+                  <tt><i>25</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;status&quot;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l41">
+                  <tt><i>41</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span><span class="n">content_type</span><span class="o">=</span><span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l54">
+                  <tt><i>54</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;home.html&#39;</span><span class="p">,</span><span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l74">
+                  <tt><i>74</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;register.html&#39;</span><span class="p">,</span><span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l93">
+                  <tt><i>93</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;manage_profile.html&#39;</span><span class="p">,</span><span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l103">
+                  <tt><i>103</i>             <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s2">&quot;Your Account Password has been updated successfully&quot;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l111">
+                  <tt><i>111</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="s1">&#39;update_password.html&#39;</span><span class="p">,</span><span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l117">
+                  <tt><i>117</i>     <span class="k">return</span> <span class="n">render</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="s1">&#39;profile.html&#39;</span><span class="p">,</span><span class="n">context</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l131">
+                  <tt><i>131</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l131">
+                  <tt><i>131</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l166">
+                  <tt><i>166</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l194">
+                  <tt><i>194</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l194">
+                  <tt><i>194</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l229">
+                  <tt><i>229</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l258">
+                  <tt><i>258</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l258">
+                  <tt><i>258</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l295">
+                  <tt><i>295</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l324">
+                  <tt><i>324</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l324">
+                  <tt><i>324</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l363">
+                  <tt><i>363</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l392">
+                  <tt><i>392</i>         <span class="n">date</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">strptime</span><span class="p">(</span><span class="n">request</span><span class="o">.</span><span class="n">POST</span><span class="p">[</span><span class="s1">&#39;date&#39;</span><span class="p">],</span><span class="s2">&quot;%Y-%m-</span><span class="si">%d</span><span class="s2">&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">date</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l400">
+                  <tt><i>400</i>         <span class="n">context</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="n">date</span><span class="p">,</span><span class="s1">&#39;depart&#39;</span><span class="p">:</span><span class="n">depart</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="n">destination</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l400">
+                  <tt><i>400</i>         <span class="n">context</span><span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;date&#39;</span><span class="p">:</span><span class="n">date</span><span class="p">,</span><span class="s1">&#39;depart&#39;</span><span class="p">:</span><span class="n">depart</span><span class="p">,</span> <span class="s1">&#39;destination&#39;</span><span class="p">:</span> <span class="n">destination</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l421">
+                  <tt><i>421</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l421">
+                  <tt><i>421</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l456">
+                  <tt><i>456</i> <span class="k">def</span> <span class="nf">view_booking</span><span class="p">(</span><span class="n">request</span><span class="p">,</span><span class="n">pk</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l468">
+                  <tt><i>468</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l468">
+                  <tt><i>468</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span><span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ',':</p>
+               
+               <a href="reservationApp.views.source.html#l483">
+                  <tt><i>483</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span><span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;application/json&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Missing whitespace after ':' (in 2 places):</p>
+               
+               <a href="reservationApp.views.source.html#l487">
+                  <tt><i>487</i>     <span class="n">resp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;status&#39;</span><span class="p">:</span><span class="s1">&#39;failed&#39;</span><span class="p">,</span> <span class="s1">&#39;msg&#39;</span><span class="p">:</span><span class="s1">&#39;&#39;</span><span class="p">}</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E302">
+               <span class="count sev-2">
+                  23
+               </span>
+               <strong>E302:</strong> expected 2 blank lines, found 0
+               
+                  (and 1 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Expected 2 blank lines, found 0:</p>
+               
+               <a href="reservationApp.views.source.html#l23">
+                  <tt><i>23</i> <span class="k">def</span> <span class="nf">login_user</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l44">
+                  <tt><i>44</i> <span class="k">def</span> <span class="nf">logoutuser</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l49">
+                  <tt><i>49</i> <span class="k">def</span> <span class="nf">home</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l56">
+                  <tt><i>56</i> <span class="k">def</span> <span class="nf">registerUser</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l76">
+                  <tt><i>76</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l129">
+                  <tt><i>129</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l153">
+                  <tt><i>153</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l164">
+                  <tt><i>164</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l184">
+                  <tt><i>184</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l192">
+                  <tt><i>192</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l216">
+                  <tt><i>216</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l227">
+                  <tt><i>227</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l256">
+                  <tt><i>256</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l280">
+                  <tt><i>280</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l293">
+                  <tt><i>293</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l322">
+                  <tt><i>322</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l346">
+                  <tt><i>346</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l361">
+                  <tt><i>361</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l404">
+                  <tt><i>404</i> <span class="k">def</span> <span class="nf">manage_booking</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">schedPK</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">pk</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l420">
+                  <tt><i>420</i> <span class="k">def</span> <span class="nf">save_booking</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l447">
+                  <tt><i>447</i> <span class="k">def</span> <span class="nf">bookings</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l485">
+                  <tt><i>485</i> <span class="nd">@login_required</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Expected 2 blank lines, found 1:</p>
+               
+               <a href="reservationApp.views.source.html#l505">
+                  <tt><i>505</i> <span class="k">def</span> <span class="nf">find_trip</span><span class="p">(</span><span class="n">request</span><span class="p">):</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W293">
+               <span class="count sev-2">
+                  8
+               </span>
+               <strong>W293:</strong> blank line contains whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l92">
+                  <tt><i>92</i>             </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l180">
+                  <tt><i>180</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l243">
+                  <tt><i>243</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l309">
+                  <tt><i>309</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l377">
+                  <tt><i>377</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l482">
+                  <tt><i>482</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l502">
+                  <tt><i>502</i>     </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l511">
+                  <tt><i>511</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E714">
+               <span class="count sev-2">
+                  6
+               </span>
+               <strong>E714:</strong> test for object identity should be 'is not'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l156">
+                  <tt><i>156</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">pk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l219">
+                  <tt><i>219</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">pk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l285">
+                  <tt><i>285</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">pk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l353">
+                  <tt><i>353</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">pk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l407">
+                  <tt><i>407</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">schedPK</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l412">
+                  <tt><i>412</i>     <span class="k">if</span> <span class="ow">not</span> <span class="n">pk</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E501">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>E501:</strong> line too long (156 > 110 characters)
+               
+                  (and 2 similar)
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <p>Line too long (156 > 110 characters):</p>
+               
+               <a href="reservationApp.views.source.html#l11">
+                  <tt><i>11</i> <span class="kn">from</span> <span class="nn">reservationApp.forms</span> <span class="kn">import</span> <span class="n">UserRegistration</span><span class="p">,</span> <span class="n">UpdateProfile</span><span class="p">,</span> <span class="n">UpdatePasswords</span><span class="p">,</span> <span class="n">SaveCategory</span><span class="p">,</span> <span class="n">SaveLocation</span><span class="p">,</span> <span class="n">SaveBus</span><span class="p">,</span> <span class="n">SaveSchedule</span><span class="p">,</span> <span class="n">SaveBooking</span><span class="p">,</span> <span class="n">PayBooked</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (201 > 110 characters):</p>
+               
+               <a href="reservationApp.views.source.html#l398">
+                  <tt><i>398</i>         <span class="n">schedules</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__year</span> <span class="o">=</span> <span class="n">year</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__month</span> <span class="o">=</span> <span class="n">month</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__day</span> <span class="o">=</span> <span class="n">day</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">depart</span> <span class="o">=</span> <span class="n">depart</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span> <span class="p">)))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li><li>
+               
+               <p>Line too long (158 > 110 characters):</p>
+               
+               <a href="reservationApp.views.source.html#l435">
+                  <tt><i>435</i>                 <span class="n">messages</span><span class="o">.</span><span class="n">success</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="sa">f</span><span class="s1">&#39;Booking has been saved successfully. Your Booking Refderence Code is: &lt;b&gt;</span><span class="si">{</span><span class="n">booking</span><span class="o">.</span><span class="n">code</span><span class="si">}</span><span class="s1">&lt;/b&gt;&#39;</span><span class="p">,</span> <span class="n">extra_tags</span> <span class="o">=</span> <span class="s1">&#39;stay&#39;</span><span class="p">)</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W291">
+               <span class="count sev-2">
+                  3
+               </span>
+               <strong>W291:</strong> trailing whitespace
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l310">
+                  <tt><i>310</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">)</span>    </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l378">
+                  <tt><i>378</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">)</span>  </tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l503">
+                  <tt><i>503</i>     <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span><span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">resp</span><span class="p">),</span> <span class="n">content_type</span><span class="o">=</span><span class="s2">&quot;application/json&quot;</span><span class="p">)</span>  </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E265">
+               <span class="count sev-2">
+                  2
+               </span>
+               <strong>E265:</strong> block comment should start with '# '
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l22">
+                  <tt><i>22</i> <span class="c1">#login</span></tt>
+               </a>
+            </li><li>
+               
+               <a href="reservationApp.views.source.html#l43">
+                  <tt><i>43</i> <span class="c1">#Logout</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E202">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E202:</strong> whitespace before ')'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l398">
+                  <tt><i>398</i>         <span class="n">schedules</span> <span class="o">=</span> <span class="n">Schedule</span><span class="o">.</span><span class="n">objects</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">status</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__year</span> <span class="o">=</span> <span class="n">year</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__month</span> <span class="o">=</span> <span class="n">month</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">schedule__day</span> <span class="o">=</span> <span class="n">day</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">Q</span><span class="p">(</span><span class="n">Q</span><span class="p">(</span><span class="n">depart</span> <span class="o">=</span> <span class="n">depart</span><span class="p">)</span> <span class="o">|</span> <span class="n">Q</span><span class="p">(</span><span class="n">destination</span> <span class="o">=</span> <span class="n">destination</span> <span class="p">)))</span><span class="o">.</span><span class="n">all</span><span class="p">()</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E203">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E203:</strong> whitespace before ':'
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l20">
+                  <tt><i>20</i>     <span class="s1">&#39;page_title&#39;</span> <span class="p">:</span> <span class="s1">&#39;File Management System&#39;</span><span class="p">,</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="E225">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>E225:</strong> missing whitespace around operator
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l36">
+                  <tt><i>36</i>                 <span class="n">resp</span><span class="p">[</span><span class="s1">&#39;status&#39;</span><span class="p">]</span><span class="o">=</span><span class="s1">&#39;success&#39;</span></tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         <li>
+            <a data-code="W292">
+               <span class="count sev-2">
+                  1
+               </span>
+               <strong>W292:</strong> no newline at end of file
+               
+            </a>
+            <ul class="details">
+            <li>
+               
+               <a href="reservationApp.views.source.html#l511">
+                  <tt><i>511</i>     </tt>
+               </a>
+            </li>
+            </ul>
+         </li>
+         
+         </ul>
+      </div>
+   </body>
+</html>
